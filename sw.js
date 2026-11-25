@@ -1,4 +1,4 @@
-var CACHE = "avivamiento-v4";
+var CACHE = "avivamiento-v5";
 self.addEventListener("install", function(e) {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(function(c) {
