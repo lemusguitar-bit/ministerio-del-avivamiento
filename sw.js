@@ -1,8 +1,8 @@
-var CACHE = "avivamiento-v3";
+var CACHE = "avivamiento-v4";
 self.addEventListener("install", function(e) {
   self.skipWaiting();
   e.waitUntil(caches.open(CACHE).then(function(c) {
-    return c.addAll(["./", "index.html", "manifest.webmanifest", "icons/icon.svg"]);
+    return c.addAll(["./", "index.html", "manifest.webmanifest", "icons/icon.svg", "video.mp4"]);
   }));
 });
 self.addEventListener("activate", function(e) {
