@@ -38,22 +38,14 @@
 <body>
   <div class="card">
     <header>
-      <video class="hero" src="https://drive.google.com/uc?export=download&id=1kHni5lTg1BG9h5M_V8a2Hh5Qb-M7Da-p" poster="https://drive.google.com/thumbnail?id=1SWtqRZOygzY_j1Ke4YFj-b03-mnVNBg5&sz=w400" autoplay muted loop playsinline></video>
+      <video class="hero" poster="https://drive.google.com/thumbnail?id=1SWtqRZOygzY_j1Ke4YFj-b03-mnVNBg5&sz=w400" autoplay muted loop playsinline>
+        <source src="video.mp4" type="video/mp4">
+        <source src="https://drive.google.com/uc?export=download&id=1kHni5lTg1BG9h5M_V8a2Hh5Qb-M7Da-p" type="video/mp4">
+      </video>
       <h1>Ministerio del Avivamiento<br>Iglesia Maranatha</h1>
       <p>Calera, Zacatecas</p>
     </header>
     <div class="verse">“Porque la tierra será llena del conocimiento de la gloria de Jehová, como las aguas cubren el mar.”<br><strong>Habacuc 2:14 (RVR1960)</strong></div>
-    <div class="who">
-      <p>¿Quién ingresa?</p>
-      <button data-persona="lemus">Lemus</button>
-      <button data-persona="mayra">Mayra</button>
-      <button data-persona="wendy">Wendy</button>
-      <button data-persona="invitado">Invitado</button>
-    </div>
-    <div class="welcome">
-      <h2 id="welcome-title">Dios te bendiga, bienvenido al Ministerio del Avivamiento</h2>
-      <span class="rol" id="welcome-rol">Invitado</span>
-    </div>
     <main>
       <a class="btn app" href="https://script.google.com/macros/s/AKfycbyNQzjTRdtHueHk7nHoiLV6h-ohICUgrjYphcaV4x-ACuh9v7ALkd6FGmgE35wWNl39/exec" target="_blank" rel="noopener">Entrar con mi cuenta de Google<small>Inicio de sesión real, te reconoce por tu correo</small></a>
     </main>
@@ -64,22 +56,6 @@
     </footer>
   </div>
 <script>
-  var saludos = {
-    lemus: ["Bienvenido Lemus, Pastor del Ministerio del Avivamiento", "Súper usuario — Pastor"],
-    mayra: ["Bienvenida Mayra, Pastora del Ministerio del Avivamiento", "Súper usuario — Pastora"],
-    wendy: ["Dios te bendiga, bienvenida pilar del Ministerio del Avivamiento", "Administrador — Secretaria Tesorera"],
-    invitado: ["Dios te bendiga, bienvenido al Ministerio del Avivamiento", "Invitado"]
-  };
-  var params = new URLSearchParams(location.search);
-  var persona = params.get("persona");
-  function elegir(p) {
-    if (!saludos[p]) return;
-    document.getElementById("welcome-title").textContent = saludos[p][0];
-    document.getElementById("welcome-rol").textContent = saludos[p][1];
-    document.querySelectorAll(".who button").forEach(function(b){ b.classList.toggle("active", b.dataset.persona === p); });
-  }
-  document.querySelectorAll(".who button").forEach(function(b){ b.addEventListener("click", function(){ elegir(b.dataset.persona); }); });
-  if (persona) elegir(persona);
   if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js").catch(function(){}); }
 </script>
 </body>
