@@ -1,0 +1,17 @@
+{
+  "background_color": "#f4f1ea",
+  "description": "Ministerio del Avivamiento \u2014 Iglesia Maranatha, Calera, Zacatecas. Formularios de miembros y finanzas, y acceso con cuenta de Google.",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "512x512",
+      "src": "icons/icon.svg",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "name": "Ministerio del Avivamiento",
+  "short_name": "Avivamiento",
+  "start_url": "index.html",
+  "theme_color": "#141210"
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#141210">
+<title>Ministerio del Avivamiento</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif; background: #f4f1ea; color: #222; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 24px 16px 40px; }
+  .card { width: 100%; max-width: 520px; background: #fff; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,.12); overflow: hidden; }
+  header { background: #141210; color: #fff; text-align: center; padding: 28px 20px 22px; }
+  header img.logo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #d4a017; background: #141210; }
+  header h1 { font-size: 22px; line-height: 1.25; margin-top: 14px; }
+  header p { margin-top: 6px; font-size: 14px; opacity: .9; }
+  .verse { padding: 18px 20px; background: #fff8e6; color: #6b4e00; font-size: 15px; text-align: center; border-bottom: 1px solid #f0e2b6; }
+  .who { padding: 16px 20px 0; text-align: center; }
+  .who p { font-size: 14px; color: #666; margin-bottom: 8px; }
+  .who button { margin: 4px; padding: 10px 14px; border-radius: 20px; border: 2px solid #1e3a5f; background: #fff; color: #1e3a5f; font-size: 14px; font-weight: 700; cursor: pointer; }
+  .who button.active { background: #1e3a5f; color: #fff; }
+  .welcome { padding: 18px 20px; text-align: center; }
+  .welcome h2 { font-size: 20px; }
+  .welcome .rol { display: inline-block; margin-top: 8px; padding: 6px 12px; border-radius: 20px; background: #1e3a5f; color: #fff; font-size: 13px; font-weight: 700; }
+  main { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+  a.btn { display: block; text-decoration: none; text-align: center; padding: 18px 16px; border-radius: 14px; font-size: 18px; font-weight: 700; line-height: 1.3; }
+  a.btn small { display: block; margin-top: 4px; font-size: 13px; font-weight: 400; opacity: .85; }
+  .miembros { background: #1e7a4c; color: #fff; }
+  .finanzas { background: #b7791f; color: #fff; }
+  .hoja { background: #eef2f7; color: #1e3a5f; border: 2px solid #1e3a5f; }
+  .app { background: #141210; color: #fff; }
+  footer { padding: 16px 20px 20px; font-size: 13px; color: #666; text-align: center; }
+</style>
+</head>
+<body>
+  <div class="card">
+    <header>
+      <img class="logo" src="https://drive.google.com/thumbnail?id=1SWtqRZOygzY_j1Ke4YFj-b03-mnVNBg5&sz=w400" alt="Logotipo Ministerio del Avivamiento — paloma de fuego, cruz y Biblia abierta">
+      <h1>Ministerio del Avivamiento<br>Iglesia Maranatha</h1>
+      <p>Calera, Zacatecas</p>
+    </header>
+    <div class="verse">“Porque la tierra será llena del conocimiento de la gloria de Jehová, como las aguas cubren el mar.”<br><strong>Habacuc 2:14 (RVR1960)</strong></div>
+    <div class="who">
+      <p>¿Quién ingresa?</p>
+      <button data-persona="lemus">Lemus</button>
+      <button data-persona="mayra">Mayra</button>
+      <button data-persona="wendy">Wendy</button>
+      <button data-persona="invitado">Invitado</button>
+    </div>
+    <div class="welcome">
+      <h2 id="welcome-title">Dios te bendiga, bienvenido al Ministerio del Avivamiento</h2>
+      <span class="rol" id="welcome-rol">Invitado</span>
+    </div>
+    <main>
+      <a class="btn miembros" href="https://docs.google.com/forms/d/e/1FAIpQLScCUfYi2qAkgM4ZFI9Wr2d5dhIJW1I2ZNTDLiNy1nAMN5pufw/viewform" target="_blank" rel="noopener">Agregar miembro<small>Formulario paso a paso para registrar un miembro</small></a>
+      <a class="btn finanzas" href="https://docs.google.com/forms/d/e/1FAIpQLSfnigw7RKRTaVQULOnHSVIizr2tAUIg3cExYRiJZDMPv-289Q/viewform" target="_blank" rel="noopener">Registrar finanzas<small>Ofrendas y gastos, ordenadas por fecha</small></a>
+      <a class="btn hoja" href="https://docs.google.com/spreadsheets/d/1MTEAneWren1m5SxGNHq2psi2gxx9CyYZOUdfQZdbB-0/edit" target="_blank" rel="noopener">Ver la hoja de registros<small>Miembros, Ministerios, Finanzas y más</small></a>
+      <a class="btn app" href="https://script.google.com/macros/s/AKfycbyNQzjTRdtHueHk7nHoiLV6h-ohICUgrjYphcaV4x-ACuh9v7ALkd6FGmgE35wWNl39/exec" target="_blank" rel="noopener">Entrar con mi cuenta de Google<small>Inicio de sesión real, te reconoce por tu correo</small></a>
+    </main>
+    <footer>
+      <p>Servicio dominical: domingo 29 de noviembre de 2026, 10:00 AM</p>
+      <p>Calle 3 Órganos #230, Fraccionamiento El Maguey, Calera, Zacatecas</p>
+      <p>Salmo 133:1 — ¡Mirad cuán bueno y cuán delicioso es habitar los hermanos juntos en armonía!</p>
+    </footer>
+  </div>
+<script>
+  var saludos = {
+    lemus: ["Bienvenido Lemus, Pastor del Ministerio del Avivamiento", "Súper usuario — Pastor"],
+    mayra: ["Bienvenida Mayra, Pastora del Ministerio del Avivamiento", "Súper usuario — Pastora"],
+    wendy: ["Dios te bendiga, bienvenida pilar del Ministerio del Avivamiento", "Administrador — Secretaria Tesorera"],
+    invitado: ["Dios te bendiga, bienvenido al Ministerio del Avivamiento", "Invitado"]
+  };
+  var params = new URLSearchParams(location.search);
+  var persona = params.get("persona");
+  function elegir(p) {
+    if (!saludos[p]) return;
+    document.getElementById("welcome-title").textContent = saludos[p][0];
+    document.getElementById("welcome-rol").textContent = saludos[p][1];
+    document.querySelectorAll(".who button").forEach(function(b){ b.classList.toggle("active", b.dataset.persona === p); });
+  }
+  document.querySelectorAll(".who button").forEach(function(b){ b.addEventListener("click", function(){ elegir(b.dataset.persona); }); });
+  if (persona) elegir(persona);
+  if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js").catch(function(){}); }
+</script>
+</body>
+</html>
