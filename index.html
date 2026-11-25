@@ -14,6 +14,8 @@
   .card { width: 100%; max-width: 520px; background: #fff; border-radius: 20px; box-shadow: 0 8px 30px rgba(0,0,0,.12); overflow: hidden; }
   header { background: #141210; color: #fff; text-align: center; padding: 28px 20px 22px; }
   header video.hero { width: 100%; display: block; border-bottom: 4px solid #d4a017; background: #141210; }
+  .hero-wrap { position: relative; }
+  .sound-btn { position: absolute; right: 10px; bottom: 14px; padding: 8px 12px; border-radius: 20px; border: none; background: rgba(20,18,16,.85); color: #fff; font-size: 14px; font-weight: 700; cursor: pointer; }
   header img.logo { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #d4a017; background: #141210; }
   header h1 { font-size: 22px; line-height: 1.25; margin-top: 14px; }
   header p { margin-top: 6px; font-size: 14px; opacity: .9; }
@@ -38,10 +40,13 @@
 <body>
   <div class="card">
     <header>
-      <video class="hero" poster="https://drive.google.com/thumbnail?id=1SWtqRZOygzY_j1Ke4YFj-b03-mnVNBg5&sz=w400" autoplay muted loop playsinline>
-        <source src="video.mp4" type="video/mp4">
-        <source src="https://drive.google.com/uc?export=download&id=1kHni5lTg1BG9h5M_V8a2Hh5Qb-M7Da-p" type="video/mp4">
-      </video>
+      <div class="hero-wrap">
+        <video id="hero-video" class="hero" poster="https://drive.google.com/thumbnail?id=1SWtqRZOygzY_j1Ke4YFj-b03-mnVNBg5&sz=w400" autoplay muted loop playsinline>
+          <source src="video.mp4" type="video/mp4">
+          <source src="https://drive.google.com/uc?export=download&id=1kHni5lTg1BG9h5M_V8a2Hh5Qb-M7Da-p" type="video/mp4">
+        </video>
+        <button class="sound-btn" id="sound-btn" type="button">🔊 Activar sonido</button>
+      </div>
       <h1>Ministerio del Avivamiento<br>Iglesia Maranatha</h1>
       <p>Calera, Zacatecas</p>
     </header>
@@ -56,6 +61,13 @@
     </footer>
   </div>
 <script>
+  var video = document.getElementById("hero-video");
+  var soundBtn = document.getElementById("sound-btn");
+  soundBtn.addEventListener("click", function() {
+    video.muted = !video.muted;
+    if (!video.muted) { video.volume = 1; video.play().catch(function(){}); }
+    soundBtn.textContent = video.muted ? "🔊 Activar sonido" : "🔇 Silenciar";
+  });
   if ("serviceWorker" in navigator) { navigator.serviceWorker.register("sw.js").catch(function(){}); }
 </script>
 </body>
